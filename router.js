@@ -17,6 +17,6 @@ module.exports = app => {
   router.get('/api/productList', controller.api.default.productList);  
   router.post('/api/register', controller.api.default.register);  
   router.put('/api/editUser', controller.api.default.editUser);  
-  router.delete('/api/deleteUser', controller.api.default.deleteUser);
+
 
 };

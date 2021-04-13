@@ -7,9 +7,7 @@ class DefaultController extends Controller {
 		          this.ctx.body="api接口"
 		    }
 
-
 	  async productList() {    
-
 
 		      const goodsResult = await this.service.user.getUserList();
 		      this.ctx.body={
@@ -17,9 +15,9 @@ class DefaultController extends Controller {
 			          }
 		    }
 
-
   //post 增加数据
   async register() {    
+    const goodsResult = await this.service.user.getUserAdd();
     console.log(this.ctx.request.body)
 
     this.ctx.body={
@@ -29,23 +27,12 @@ class DefaultController extends Controller {
 
    //put 修改数据
    async editUser() {    
+    const goodsResult = await this.service.user.getUserEdit();
     console.log(this.ctx.request.body)
     this.ctx.body={
       result:'success_put'
     }
   }
-
-  async deleteUser() {    
-    // console.log(this.ctx.request.body);
-
-    console.log(this.ctx.request.query);
-    this.ctx.body={
-      result:'success_delete'
-    }
-  }
-
-	  
-
 
 }
 
