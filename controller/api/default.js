@@ -18,56 +18,31 @@ class DefaultController extends Controller {
 		    }
 
 
-	  async register() {    
-		    var user=new this.ctx.model.User({
-			            username:'李四',
-			            password:'123456'
+  //post 增加数据
+  async register() {    
+    console.log(this.ctx.request.body)
 
-			        });
+    this.ctx.body={
+      result:'success_post'
+    }
+  }
 
-		      var result=await user.save();
-		      console.log(result)
+   //put 修改数据
+   async editUser() {    
+    console.log(this.ctx.request.body)
+    this.ctx.body={
+      result:'success_put'
+    }
+  }
 
-                      this.ctx.body={
-		                  result:'success_delete'
-		                  }
+  async deleteUser() {    
+    // console.log(this.ctx.request.body);
 
-                     
-		  }
-
-
-	   async editUser() {    
-
-	  
-		await this.ctx.model.User.updateOne({
-			        "_id":"60645ec03d4977404f267c39"
-			    },{
-				          username:"哈哈哈",
-				          password:'1234'
-				        },function(err,result){
-
-						      if(err){
-							              console.log(err);
-							              return;
-							            }
-						      console.log(result)
-						    })
-
-		       this.ctx.body='修改用户成功';
-
-		   
-		   
-	   }	   
-           async deleteUser() {    
-
-                      var rel =await this.ctx.model.User.deleteOne({"_id":"60645ec03d4977404f267c39"});
-
-		      console.log(rel)
-
-		      this.ctx.body='删除用户成功';
-
-
-		    }
+    console.log(this.ctx.request.query);
+    this.ctx.body={
+      result:'success_delete'
+    }
+  }
 
 	  
 
