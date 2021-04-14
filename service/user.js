@@ -14,7 +14,7 @@ class UserService extends Service {
       username:this.ctx.request.body.username,
       password:this.ctx.request.body.password,
     })
-    await user.save();   //注意
+    await this.ctx.model.user.save();   //注意
     await this.success("增加用户成功");
   } 
 
