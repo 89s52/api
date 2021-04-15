@@ -27,7 +27,7 @@ class UserService extends Service {
     console.log(this.ctx.request.body);
     //var username=this.ctx.request.body.username;
     //var password= this.ctx.request.body.password;
-    await this.ctx.model.User.updateOne({_id:'606bb1afb52dd110856856f0'},{"username":'hhhjjj'})
+    await this.ctx.model.User.updateOne({"_id":'606bb1afb52dd110856856f0'},{"username":'hhhjjj'})
      //await this.success('编辑用户成功');     
   } 
 }
