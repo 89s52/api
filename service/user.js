@@ -19,7 +19,7 @@ class UserService extends Service {
 
     });
     await user.save();   //注意
-    await this.success("增加用户成功");
+    //await this.success("增加用户成功");
   } 
 
   async getUserEdit() {
