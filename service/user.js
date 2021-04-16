@@ -50,7 +50,7 @@ class UserService extends Service {
 
   async removeUser() {
 
-    var rel =await this.ctx.model.User.deleteOne({"_id":"6078e48aed61a330635d2f6a"});
+    var rel =await this.ctx.model.User.deleteOne({"_id":"6078e505ed61a330635d2f6a"});
 
     console.log(rel)
     
