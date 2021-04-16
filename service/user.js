@@ -34,6 +34,15 @@ class UserService extends Service {
 
      //await this.success('编辑用户成功');     
   } 
+
+  async removeUser() {
+
+    var rel =await this.ctx.model.User.deleteOne({"_id":"6078e48aed61a330635d2f68"});
+
+    cnsole.log(rel)
+    
+  }
+
 }
 
 module.exports = UserService;
