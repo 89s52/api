@@ -8,11 +8,15 @@ class UserService extends Service {
        return await this.ctx.model.User.find({});
   }
 
+ 
   async getUserAdd() {
    console.log(this.ctx.request.body);
+   var getuser=this.ctx.request.body;
     var user=new this.ctx.model.User({
-      username:this.ctx.request.body.username,
-      password:this.ctx.request.body.password,
+      getuser
+      
+      //username:getuser.username,
+      //password:getuser.password,
 
       //username:'fff',
       //password:2235456,
