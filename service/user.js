@@ -35,8 +35,10 @@ class UserService extends Service {
     // var password= this.ctx.request.body.password;
     // await this.ctx.model.User.updateOne({age: 18}, {name: 'changeName'})
 
+    var userid= this.ctx.request.body;
+
     await this.ctx.model.User.updateOne({
-      "_id":"6078e505ed61a330635d2f6a"
+      "_id":userid.id
   },{
     username:"哈哈哈",
     password:'1234'
