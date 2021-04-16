@@ -10,6 +10,8 @@ class UserService extends Service {
 
  
   async getUserAdd() {
+
+     //user表增加数据
    console.log(this.ctx.request.body);
    var getuser=this.ctx.request.body;
     var user=new this.ctx.model.User({
@@ -27,6 +29,7 @@ class UserService extends Service {
 
   async getUserEdit() {
  
+     //修改user表的数据
     // console.log(this.ctx.request.body);
     // var username=this.ctx.request.body.username;
     // var password= this.ctx.request.body.password;
@@ -49,6 +52,8 @@ class UserService extends Service {
   } 
 
   async removeUser() {
+
+     //删除user表的数据
 
     var rel =await this.ctx.model.User.deleteOne({"_id":"6078e505ed61a330635d2f6a"});
 
