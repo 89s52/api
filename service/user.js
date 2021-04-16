@@ -57,7 +57,9 @@ class UserService extends Service {
 
      //删除user表的数据
 
-    var rel =await this.ctx.model.User.deleteOne({"_id":"6078e505ed61a330635d2f6a"});
+     var removeid= this.ctx.request.body;
+
+    var rel =await this.ctx.model.User.deleteOne({"_id":removeid.id});
 
     console.log(rel)
     
