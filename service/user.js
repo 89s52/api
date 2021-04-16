@@ -27,12 +27,25 @@ class UserService extends Service {
 
   async getUserEdit() {
  
-    console.log(this.ctx.request.body);
-    var username=this.ctx.request.body.username;
-    var password= this.ctx.request.body.password;
-    await this.ctx.model.User.updateOne({age: 18}, {name: 'changeName'})
+    // console.log(this.ctx.request.body);
+    // var username=this.ctx.request.body.username;
+    // var password= this.ctx.request.body.password;
+    // await this.ctx.model.User.updateOne({age: 18}, {name: 'changeName'})
 
-     //await this.success('编辑用户成功');     
+    await this.ctx.model.User.updateOne({
+      "_id":"6078e505ed61a330635d2f6a"
+  },{
+    username:"哈哈哈",
+    password:'1234'
+  },function(err,result){
+
+    if(err){
+      console.log(err);
+      return;
+    }
+    console.log(result)
+  });
+
   } 
 
   async removeUser() {
