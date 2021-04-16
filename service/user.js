@@ -13,13 +13,13 @@ class UserService extends Service {
    console.log(this.ctx.request.body);
    var getuser=this.ctx.request.body;
     var user=new this.ctx.model.User({
-      //getuser,
+      getuser,
       
       //username:getuser.username,
       //password:getuser.password,
 
-      username:'ffttt',
-      password:2235456,
+      //username:'ffttt',
+      //password:2235456,
 
     });
     await user.save();   //注意
