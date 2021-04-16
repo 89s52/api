@@ -39,7 +39,7 @@ class UserService extends Service {
 
     var rel =await this.ctx.model.User.deleteOne({"_id":"6078e48aed61a330635d2f68"});
 
-    cnsole.log(rel)
+    console.log(rel)
     
   }
 
