@@ -40,8 +40,8 @@ class UserService extends Service {
     await this.ctx.model.User.updateOne({
       "_id":userid.id
   },{
-    username:"哈哈哈",
-    password:'1234'
+    username:userid.username,
+    password:userid.password,
   },function(err,result){
 
     if(err){
