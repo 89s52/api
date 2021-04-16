@@ -34,6 +34,15 @@ class DefaultController extends Controller {
     }
   }
 
+  async deleteUser() {    
+    const goodsResult = await this.service.user.removeUser();
+    console.log(this.ctx.request.body)
+    this.ctx.body={
+      result:'success_put'
+    }
+  }
+
+
 }
 
 module.exports = DefaultController;
