@@ -10,14 +10,20 @@ class UserService extends Service {
 
  
   async getUserAdd() {
+   console.log(this.ctx.request.body);
+   var getuser=this.ctx.request.body;
     var user=new this.ctx.model.User({
-      username:'李四',
-      password:'123456'
+      //getuser,
+      
+      //username:getuser.username,
+      //password:getuser.password,
 
-  });
+      username:'ffttt',
+      password:2235456,
 
-  var result=await user.save();
-  console.log(result)
+    });
+    await user.save();   //注意
+    //await this.success("增加用户成功");
   } 
 
   async getUserEdit() {
